@@ -1,0 +1,10 @@
+<table border="2">
+<tr><{foreach item=item from=$block.items}>
+<td align="center" class="<{cycle values="even,odd"}>">
+<a href="<{$item.URL}>" target="<{$block.TargetWindow}>"><img src="<{$item.MediumImageURL}>" width="<{$item.MediumImageWidth}>" height="<{$item.MediumImageHeight}>" border="0" alt="Click this image" /></a>
+<br clear="all" />
+<a href="<{$item.URL}>" target="<{$block.TargetWindow}>"><{$item.Title}></a>
+</td>
+<{/foreach}></tr>
+</table>
+<a href="http://xoops.taquino.net/"><span style="font-size:xx-small; text-align:center; display:none;">Amaxoop Lite</span></a>

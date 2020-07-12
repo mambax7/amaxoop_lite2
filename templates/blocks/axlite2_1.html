@@ -1,0 +1,12 @@
+<table border="2">
+<{foreach item=item from=$block.items}>
+<tr class="<{cycle values="even,odd"}>"><td align="center">
+<a href="<{$item.URL}>" target="<{$block.TargetWindow}>"><img src="<{$item.MediumImageURL}>" width="<{$item.MediumImageWidth}>" height="<{$item.MediumImageHeight}>" border="0" alt="<{$item.Title}>" /></a>
+<{if $item.RatingImageURL != ''}>
+<br clear="all" />
+<img src="<{$item.RatingImageURL}>" alt="<{$item.AverageRating}>" />
+<{/if}>
+</td></tr>
+<{/foreach}>
+</table>
+<a href="http://xoops.taquino.net/"><span style="font-size:xx-small; text-align:center; display:none;">Amaxoop Lite 2</span></a>

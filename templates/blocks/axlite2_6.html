@@ -1,0 +1,32 @@
+<table border="2">
+<{foreach item=item from=$block.items}>
+<tr class="<{cycle values="even,odd" advance="0"}>">
+<td align="center" rowspan="3">
+<a href="<{$item.URL}>" target="<{$block.TargetWindow}>"><img src="<{$item.MediumImageURL}>" width="<{$item.MediumImageWidth}>" height="<{$item.MediumImageHeight}>" border="0" alt="Click this image" /></a>
+</td>
+<td>
+<a href="<{$item.URL}>" target="<{$block.TargetWindow}>"><{$item.Title}></a>
+<{if $item.RatingImageURL != ''}>
+<br clear="all"><img src="<{$item.RatingImageURL}>" alt="<{$item.AverageRating}>" />
+<{/if}>
+</td>
+</tr>
+<tr class="<{cycle advance="0"}>"><td>
+<{if $item.Authors != ''}>
+<{$item.Authors}>
+<{/if}>
+<{if $item.Authors != ''}>
+<{if $item.Manufacturer != ''}>
+<br />
+<{/if}>
+<{/if}>
+<{if $item.Manufacturer != ''}>
+<span style="text-align:right; float:right;"><{$item.Manufacturer}></span>
+<{/if}>
+</td></tr>
+<tr class="<{cycle}>"><td>
+<{$item.EditorialReview}>
+</td></tr>
+<{/foreach}>
+</table>
+<a href="http://xoops.taquino.net/"><span style="font-size:xx-small; text-align:center; display:none;">Amaxoop Lite</span></a>
